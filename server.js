@@ -5,9 +5,9 @@ const path = require('path');
 
 dotenv.config();
 
-const connectDB = require('./db/connection');
-const authRoutes = require('./routes/auth');
-const adminRoutes = require('./routes/admin');
+const connectDB = require('db/connection');
+const authRoutes = require('routes/auth');
+const adminRoutes = require('routes/admin');
 
 const app = express();
 
