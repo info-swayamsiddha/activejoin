@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub - Social Platform</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">ConnectHub</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#" onclick="showDashboard()">Dashboard</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+        <li id="adminLink" class="hidden"><a href="/admin">Admin Panel</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="auth-section" id="landingSection">
+      <h1>Welcome to ConnectHub</h1>
+      <p>Connect with individuals and communities based on your interests, city-wise.</p>
+      <p>Whether you're into sports, athletic activities, or social help - find your tribe!</p>
+      <button onclick="window.location.href='/register'">Get Started</button>
+    </div>
+
+    <div class="dashboard hidden" id="dashboardSection">
+      <h2>Your Connections</h2>
+      <div class="city-filter">
+        <label for="cityFilter">Filter by City:</label>
+        <select id="cityFilter" onchange="filterByCity()">
+          <option value="">All Cities</option>
+        </select>
+      </div>
+      <div id="usersList"></div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
